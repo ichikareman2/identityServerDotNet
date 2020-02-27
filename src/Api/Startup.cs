@@ -41,6 +41,7 @@ namespace Api
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers(); // Adds endpoints for controller actions to the Microsoft.AspNetCore.Routing.IEndpointRouteBuilder without specifying any routes.
                 endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("Hello World!");
